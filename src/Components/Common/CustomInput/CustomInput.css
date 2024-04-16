@@ -1,0 +1,35 @@
+.common-input-box {
+    position: relative;
+    width: 100%;
+    border-radius: 10px;
+}
+.common-input-box input {
+    outline: none;
+    color: rgb(39, 35, 35);
+    padding: .5rem 1rem;
+    border: solid rgb(187, 176, 176);
+    border-radius: 10px;
+    width: 100%;
+}
+.common-input-box:focus-within{
+        border: 1px solid var(--dark-green);
+}
+.common-input-box label{
+    position: absolute;
+    top: .5rem;
+    left: 1rem;
+    color: rgb(189, 178, 180);
+    pointer-events: none;
+    text-transform: capitalize;
+    font-size: 1rem;
+    transition: 150ms cubic-bezier(.4,0,.2,.1);
+}
+.common-input-box input:is(:focus,:valid) ~ label {
+    transform: translate(0,-1.35rem) scale(.8);
+    background-color: white;
+    padding-inline: .3rem;
+    color: var(--dark-green);
+}
+input:-webkit-autofill{
+    -webkit-box-shadow: 0 0 0 1000px white inset;
+}
