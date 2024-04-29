@@ -7,7 +7,7 @@ import SignUpBox from '../../Components/AuthBox/SignUpBox'
 function AuthPage() {
   const [boxType,setBoxType]=useState('login')  
   return (
-    <div className="container-fluid d-flex justify-content-center align-items-center vh-100 vw-100">
+    <div className="container-fluid d-flex justify-content-center align-items-center vh-100 vw-100 authpage">
         <div className='row'>
             <div className="col-md-6 left-image border"style={{backgroundImage:`url(${authImage})`}}>
                 <p>Reserve your spot, create memories, and let the game begin!</p>
